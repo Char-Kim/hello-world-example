@@ -29,14 +29,3 @@ node('docker'){
     server.upload(uploadSpec)
   }
 }
-
-        
-      
-      
-      sh 'mvn clean verify Dsurefire.skip=true';
-    junit '**/target/faildafe-reports/TEST-*.xml'
-    archive 'target/*.jar'
-  }
-  
-  
-}
